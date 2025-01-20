@@ -1,0 +1,264 @@
+/* Estilo general del body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  color: #333;
+  min-width: 320px;
+}
+
+/* Encabezado */
+header {
+  background-color: red;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-direction: column; /* Organiza los elementos en columna */
+  border-radius: 8px;
+  box-shadow: 3px 3px 8px #c0c0c0, -3px -3px 8px #ffffff;
+}
+
+/* Contenedor dentro del header */
+.header-container {
+  display: flex;
+  flex-direction: column; /* Logo arriba y datetime abajo */
+  align-items: center; /* Centra horizontalmente */
+  gap: 1px; /* Espaciado entre el logo y el datetime */
+}
+
+/* Estilo del logo */
+header img {
+  width: 350px; /* Tamaño base */
+  height: auto;
+  max-width: 400px;
+}
+
+/* Estilo del contador */
+header #datetime {
+  font-size: 1.2rem; /* Tamaño del texto */
+  color: white;
+  text-align: center;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  header img {
+      width: 350px; /* Tamaño para tablets */
+  }
+  
+  .header-container {
+      padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+      flex-direction: column;
+      gap: 15px;
+  }
+  
+  header img {
+      width: 220px; /* Tamaño para móviles */
+  }
+  
+  header #datetime {
+      margin-top: 5px;
+  }
+}
+/* Contenedor principal */
+main {
+  padding: 20px;
+  width: 95%;
+  margin: 0 auto;
+  background: linear-gradient(145deg, #f9f9f9, #ffffff);
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px #c0c0c0, -3px -3px 8px #ffffff;
+}
+
+/* Secciones */
+section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #c0c0c0, -2px -2px 5px #ffffff;
+}
+
+/* Formulario */
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+form input, form select, form button {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: inset 2px 2px 4px #c0c0c0, inset -2px -2px 4px #ffffff;
+  transition: all 0.3s ease-in-out;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+form button {
+  background: linear-gradient(145deg, #2fca00, #26a800);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px #c0c0c0, -2px -2px 5px #ffffff;
+}
+
+form button:hover {
+  background: linear-gradient(145deg, #26a800, #1e8900);
+  transform: translateY(-2px);
+}
+
+/* Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 3px 3px 8px #c0c0c0, -3px -3px 8px #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  /* Quitamos display: block por defecto */
+}
+
+
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 14px;
+  min-width: 80px;
+}
+
+table th {
+  background: linear-gradient(145deg, #f2f2f2, #dcdcdc);
+  font-weight: bold;
+}
+
+table tr:hover {
+  background: #f9f9f9;
+  transform: scale(1.02);
+}
+
+.low-stock {
+  color: red;
+  font-weight: bold;
+}
+
+/* Botones dentro de la tabla */
+table button {
+  padding: 8px 12px;
+  background: linear-gradient(145deg, #2fca00, #26a800);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px #c0c0c0, -2px -2px 5px #ffffff;
+  transition: all 0.3s ease-in-out;
+  min-width: 40px;
+  margin: 2px;
+}
+
+table button:hover {
+  background: linear-gradient(145deg, #26a800, #1e8900);
+  transform: translateY(-2px);
+}
+
+/* Input de búsqueda */
+#searchBox {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: inset 2px 2px 4px #c0c0c0, inset -2px -2px 4px #ffffff;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+#searchBox:focus {
+  outline: none;
+  box-shadow: 0 0 8px #26a800;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  header img {
+      width: 180px;
+  }
+  
+  main {
+      padding: 15px;
+  }
+  
+  form input, form select, form button {
+      font-size: 16px;
+      padding: 10px;
+  }
+  
+  table th, table td {
+      padding: 8px;
+      font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  header img {
+      width: 150px;
+  }
+  
+  main {
+      padding: 10px;
+      width: 98%;
+  }
+  
+  .header-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  
+  #datetime {
+      margin-top: 5px;
+      font-size: 0.9rem;
+  }
+  
+  section {
+      padding: 10px;
+  }
+  
+  form label {
+      font-size: 14px;
+  }
+  
+  table button {
+      padding: 8px 12px;
+      margin: 2px;
+      display: inline-block;
+  }
+}
+
+@media (max-width: 768px) {
+  table {
+      display: block; /* Solo aplicamos display: block en pantallas pequeñas */
+      overflow-x: auto;
+      white-space: nowrap;
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Stock</title>
+    <link rel="stylesheet" href="stock.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="LOGO_2.png" alt="Control de Stock" id="logo">
+            <p id="datetime"></p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Formulario para agregar productos -->
+        <section id="product-form">
+            <h2>Registrar Producto</h2>
+            <form id="addProductForm">
+                <label for="name">Nombre del Producto:</label>
+                <input type="text" id="name" required>
+
+                <label for="quantity">Cantidad:</label>
+                <input type="number" id="quantity" min="0" required>
+
+                <label for="price">Precio:</label>
+                <input type="number" id="price" step="0.01" min="0" required>
+
+                <label for="category">Categoría:</label>
+                <select id="category" required>
+                    <option value="Bebidas">Bebidas</option>
+                    <option value="Lácteos">Lácteos</option>
+                    <option value="Panadería">Panadería</option>
+                    <option value="Limpieza">Limpieza</option>
+                    <option value="Higiene Personal">Higiene Personal</option>
+                    <option value="Congelados">Congelados</option>
+                    <option value="Snack y Golosinas">Snack y Golosinas</option>
+                    <option value="Despensa">Despensa</option>
+                </select>
+
+                <button type="submit">Agregar Producto</button>
+            </form>
+        </section>
+
+        <!-- Cuadro de búsqueda -->
+        <input type="text" id="searchBox" placeholder="Buscar producto..." oninput="searchProduct()">
+
+        <!-- Tabla para mostrar el stock -->
+        <section id="product-list">
+            <h2>Listado de Productos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody">
+                    <!-- Aquí se llenarán los productos -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="stock.js"></script>
+</body>
+</html>
